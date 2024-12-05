@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Downloader</title>
+</head>
+<body>
+    <button onclick="downloadFolder('p2.zip')">p2</button>
+    <button onclick="downloadFolder('p3.zip')">p3</button>
+    <button onclick="downloadFolder('p4.zip')">p4</button>
+    <button onclick="downloadFolder('p5.zip')">p5</button>
+    
+    
+    <script>
+        function downloadFolder(fileName) {
+            const link = document.createElement('a');
+            link.href = fileName; // The file path should match where the files are stored.
+            link.download = fileName;
+            link.click();
+        }
+    </script>
+</body>
+</html>
